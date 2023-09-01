@@ -8,6 +8,10 @@ import { CourseDetailsComponent } from './courses/course-details/course-details.
 import { CatalogComponent } from './courses/catalog/catalog.component';
 import { HeaderComponent } from './mutual/header/header.component';
 import { FooterComponent } from './mutual/footer/footer.component';
+import { MainCarouselComponent } from './mutual/main-carousel/main-carousel.component';
+import { CarouselComponent } from './mutual/carousel/carousel.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,9 @@ import { FooterComponent } from './mutual/footer/footer.component';
     CourseDetailsComponent,
     CatalogComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainCarouselComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
