@@ -1,0 +1,50 @@
+
+.carousel {
+  
+  .control{
+    position: absolute;
+    top: 30%;
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.408);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  .button-left {
+    
+    left: 0;
+  }
+
+  .button-right {
+    right: 0;
+  }
+}
+
+.item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.botoes-controle {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.botoes-controle button {
+  background: #efefef;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+}
+
+.botoes-controle button.ativo {
+  background: #cacaca;
+  cursor: default;
+}

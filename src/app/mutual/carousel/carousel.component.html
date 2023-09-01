@@ -1,0 +1,14 @@
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <div class="card" [style.backgroundImage]="'url(' + slides[activeSlideIndex-1] + ')'"></div>
+            </div>
+            <div class="slide">
+                <div class="card" [style.backgroundImage]="'url(' + slides[activeSlideIndex] + ')'"></div>
+            </div>
+            <div class="slide">
+                <div class="card" [style.backgroundImage]="'url(' + slides[activeSlideIndex+1] + ')'"></div>
+        </div>
+    </div>
+</div>
