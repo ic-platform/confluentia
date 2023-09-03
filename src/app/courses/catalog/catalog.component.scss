@@ -16,14 +16,19 @@
 
 .sec2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 100px;
   padding-bottom: 50px;
-
 }
 
 .divPagina {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
   width: 100vw;
 }
 
@@ -94,6 +99,13 @@ select {
   height: 300px;
 }
 
-#titleCatalog {
+.sec2 .h1 {
   font-size: 20px;
+  margin: 10px;
+}
+
+.divCard {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
 }

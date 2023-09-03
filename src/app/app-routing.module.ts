@@ -5,6 +5,7 @@ import { CatalogComponent } from './courses/catalog/catalog.component';
 import { CourseDetailsComponent } from './courses/course-details/course-details.component';
 import { CardsComponent } from './courses/cards/cards.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -24,7 +25,7 @@ const routes: Routes = [
     component: CourseDetailsComponent
   },
   {
-    path: 'card',
+    path: 'cards',
     component: CardsComponent
   }
 ];

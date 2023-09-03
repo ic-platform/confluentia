@@ -88,3 +88,14 @@
 .save:hover .svg {
   fill: #ced8de;
 }
+
+
+
+.divCard {
+  display: grid;
+  grid-template-columns: 540px 540px;
+  grid-template-rows: 340px 340px;
+  justify-items: center;
+  align-items: center;
+
+}
