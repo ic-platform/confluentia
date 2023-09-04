@@ -10,8 +10,7 @@ import { HeaderComponent } from './mutual/header/header.component';
 import { FooterComponent } from './mutual/footer/footer.component';
 import { MainCarouselComponent } from './mutual/main-carousel/main-carousel.component';
 import { CarouselComponent } from './mutual/carousel/carousel.component';
-
-
+import { CardsComponent } from './courses/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { CarouselComponent } from './mutual/carousel/carousel.component';
     HeaderComponent,
     FooterComponent,
     MainCarouselComponent,
-    CarouselComponent
+    CarouselComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
