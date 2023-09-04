@@ -8,54 +8,28 @@ import { timer } from 'rxjs';
 })
 export class CarouselComponent {
 
-   @Input() slides: string[] = [
-    "",
-    "",
-    "",
-    ""
-  ];
-  private _activeSlideIndex: number = 0; // a variavel não é alterada diretamente pelo html
-  timerSubs: any;
-  
-  get activeSlideIndex() { // metodo de leitura acessado diretamente pelo html
-    return this._activeSlideIndex;
-  }
+  public slides = [
+    {
+      id: 0,
+      title: "Título do Destaque 0",
+      info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies orci vel eros ornare pellentesque. Praesent sodales a mi quis dapibus. "
+    },
+    {
+      id: 1,
+      title: "Título do Destaque 1",
+      info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies orci vel eros ornare pellentesque. Praesent sodales a mi quis dapibus. "
+    },
+    {
+      id: 2,
+      title: "Título do Destaque 2",
+      info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies orci vel eros ornare pellentesque. Praesent sodales a mi quis dapibus. "
+    },
 
-  set activeSlideIndex(value: number) { // metodo de escrita acessado diretamente pelo html
-    if (value < 0) {
-      this._activeSlideIndex = this.slides.length - 1;
-    } else if (value >= this.slides.length) {
-      this.activeSlideIndex = 0;
-    } else {
-      this._activeSlideIndex = value;
-    } 
+  ]
 
-  }
-  
+  public index1 = 0;
+  public index2 = 1;
+  public index3 = 2;
 
-  ngOnInit(): void { // a pagina inicia o o timer do slide
-    this.startTimer();
-  }
 
-  ngOnDestroy(): void { // a pagina finaliza o time do slide ao ser fechada
-    this.stopTimer();
-  }
-
-  
-
-  startTimer(): void {
-    this.timerSubs = timer(5000).subscribe(() => {
-      this.activeSlide(this.activeSlideIndex + 1);
-    });
-  }
-
-  stopTimer(): void {
-    this.timerSubs?.unsubscribe();
-  }
-
-  activeSlide(index: number): void { //metodo chamado a cada X seg para atualizar o slide;
-    this.activeSlideIndex = index;
-    this.startTimer();
-  }
- 
 }

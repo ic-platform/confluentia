@@ -1,41 +1,36 @@
 
-.carousel {
-  
-  .control{
-    position: absolute;
-    top: 30%;
-    margin: 15px;
-    background-color: rgba(0, 0, 0, 0.408);
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-  }
-
-  .button-left {
-    
-    left: 0;
-  }
-
-  .button-right {
-    right: 0;
-  }
+.control{
+  position: absolute;
+  top: 40%;
+  margin: 15px;
+  background-color: rgba(0, 0, 0, 0.408);
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.button-left {
+  left: 0;
 }
 
-.item {
+.button-right {
+  right: 0;
+}
+
+.slide {
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
-  transition: transform 0.3s ease-in-out;
-}
+  transition: margin-left 4s ease-in-out 1s;
+} 
 
-.botoes-controle {
+.ctrl-buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 8px;
 }
 
-.botoes-controle button {
+.ctrl-buttons button {
   background: #efefef;
   border: none;
   border-radius: 50%;
@@ -44,7 +39,7 @@
   width: 12px;
 }
 
-.botoes-controle button.ativo {
+.ctrl-buttons button.ativo {
   background: #cacaca;
   cursor: default;
 }
