@@ -16,7 +16,9 @@
 
   .social{
     .socialIcon{
-
+      svg{
+        @apply m-2;
+      }
     }
   }
 }
