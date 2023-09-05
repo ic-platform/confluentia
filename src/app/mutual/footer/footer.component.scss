@@ -1,13 +1,16 @@
 .footer{
-  @apply flex flex-row justify-between py-3 px-6;
+  @apply flex flex-row justify-between py-7 px-11 bg-neutral-400;
 
   .talkWithUs{
     .talkWithUsP{
+      @apply font-semibold text-black uppercase;
+    }
 
+    .talkWithUsStext, .talkWithUsA{
+      @apply pl-2 pt-0.5;
     }
 
     .talkWithUsA{
-
     }
   }
 

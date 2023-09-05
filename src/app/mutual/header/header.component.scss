@@ -1,15 +1,15 @@
 nav{
-  @apply flex items-center justify-between p-4 bg-gray-400;
+  @apply flex items-center justify-between px-5 py-6;
 
   .div1{
     @apply flex items-center;
 
     .logo{
-      @apply text-white font-bold text-lg;
+      //@apply text-white font-bold text-lg;
     }
 
     .page-links{
-      @apply ml-4;
+      @apply ml-4 text-black font-semibold uppercase;
 
       a{
         @apply text-black p-3 rounded;
@@ -24,8 +24,12 @@ nav{
   .div2{
     .div2-div1{
       .search-bar{
-        @apply bg-gray-200 rounded-lg py-1 px-2
+        @apply bg-gray-200 rounded-md py-1 px-2 border border-black
       }
+    }
+
+    .profile-btn{
+      @apply flex items-center rounded-md py-1 px-2 border border-black;
     }
   }
 }
