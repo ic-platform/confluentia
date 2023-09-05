@@ -3,9 +3,29 @@ nav{
 
   .div1{
     @apply flex items-center;
+
+    .logo{
+      @apply text-white font-bold text-lg;
+    }
+
+    .page-links{
+      @apply ml-4;
+
+      a{
+        @apply text-black p-3 rounded;
+
+        &:hover{
+          @apply bg-slate-50;
+        }
+      }
+    }
   }
 
-  .div1-div1{
-
+  .div2{
+    .div2-div1{
+      .search-bar{
+        @apply bg-gray-200 rounded-lg py-1 px-2
+      }
+    }
   }
 }
