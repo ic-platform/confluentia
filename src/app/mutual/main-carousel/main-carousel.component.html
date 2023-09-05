@@ -2,14 +2,15 @@
   <div class="carousel">
     <button class="button-left control left" (click)="stopTimer(); previousSlide(activeSlideIndex)"></button>
 
-    <div class="item" [style.backgroundImage]="'url(' + slides[activeSlideIndex] + ')'">
+    <div class="slide" [style.backgroundImage]="'url(' + slides[activeSlideIndex] + ')'">
     </div>
     <button class="button-right control rigth" (click)="stopTimer(); nextSlide(activeSlideIndex)"></button>
 
-    <div class="botoes-controle">
-      <button *ngFor="let sld of slides; index as i" [class.ativo]="i === activeSlideIndex"
-        (click)="stopTimer(); activeSlide(i)"></button>
-    </div>
+   
+  </div>
+  <div class="ctrl-buttons">
+    <button *ngFor="let sld of slides; index as i" [class.ativo]="i === activeSlideIndex"
+      (click)="stopTimer(); activeSlide(i)"></button>
   </div>
 
 
