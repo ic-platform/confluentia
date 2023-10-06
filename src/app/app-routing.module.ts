@@ -21,7 +21,7 @@ const routes: Routes = [
     component: CatalogComponent
   },
   {
-    path: 'course-details',
+    path: 'course-details/:id',
     component: CourseDetailsComponent
   },
   {

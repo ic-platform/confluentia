@@ -5,11 +5,11 @@
       <div class="img2">
         <div class="cardBottom">
           <div class="text">
-            <p class="h3"> {{ item.nome }} </p>
+            <p class="h3"> {{ item.name }} </p>
             <p class="p"> {{ item.desc }} </p>
           </div>
           <div class="btn">
-            <button href="#">Informações</button>
+            <button [routerLink]="['/course-details', item.id]">Informações</button>
           </div>
         </div>
       </div>

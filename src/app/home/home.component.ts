@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CourseData } from '../models/course-data.model';
+import { CourseService } from '../services/course.service';
 
 @Component({
   selector: 'app-home',
@@ -7,52 +9,16 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  public cards = [
-    {
-      id: 0,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 1,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 2,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 3,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 4,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 5,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 6,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 7,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
-    {
-      id: 8,
-      title: "Título do Curso",
-      info: "Lorem ipsum dolor sit amet consectetur. Nibh dis nisi mattis nec neque. "
-    },
+  public courses: Array<CourseData> = []
 
-  ]
+  constructor( private courseSrv: CourseService) {
+
+
+  }
+
+  ngOnInit(): void {
+    this.courses = this.courseSrv.getAllCourses()
+  }
+
+  
 }

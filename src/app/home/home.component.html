@@ -26,11 +26,11 @@
         <h3 class="title-3">CURSOS EM DESTQUE</h3>
 
         <div class=cards-area>
-            <div class="card" *ngFor="let card of cards">
+            <div class="card" *ngFor="let course of courses">
                 <img src="" alt="">
                 <div class="info">
-                    <h5 class="title-card">{{card.title}}</h5>
-                    <p class="info-card">{{card.info}}</p>
+                    <h5 class="title-card">{{course.name}}</h5>
+                    <p class="info-card">{{course.desc}}</p>
                 </div>
                 <button class="btn-info">Informações</button>
             </div>
