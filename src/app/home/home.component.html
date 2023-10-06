@@ -32,7 +32,7 @@
                     <h5 class="title-card">{{course.name}}</h5>
                     <p class="info-card">{{course.desc}}</p>
                 </div>
-                <button class="btn-info">Informações</button>
+                <button class="btn-info" [routerLink]="['/course-details', course.id]">Informações</button>
             </div>
         </div>
     </div>
