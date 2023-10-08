@@ -4,13 +4,13 @@ This project is an Alpha Version of IC Platform (this name will be changed in a 
 
 ## Vercel Links
 
-[Main](https://icplatform.vercel.app/)
-[Test Branch](https://icplatform-qa.vercel.app/)
-[Felipe Branch](https://felipe-alt-icplatform.vercel.app/)
-[Guilherme Branch](https://henry-alt-icplatform.vercel.app/)
-[Isabela Branch](https://bela-alt-icplatform.vercel.app/)
-[Karen Branch](https://karen-alt-icplatform.vercel.app/)
-[Túlio Branch](https://tulio-alt-icplatform.vercel.app/)
+[Main](https://icplatform.vercel.app/) <br>
+[Test Branch](https://icplatform-qa.vercel.app/) <br>
+[Felipe Branch](https://felipe-alt-icplatform.vercel.app/) <br>
+[Guilherme Branch](https://henry-alt-icplatform.vercel.app/) <br>
+[Isabela Branch](https://bela-alt-icplatform.vercel.app/) <br>
+[Karen Branch](https://karen-alt-icplatform.vercel.app/) <br>
+[Túlio Branch](https://tulio-alt-icplatform.vercel.app/) 
 
 ## Important Data
 
