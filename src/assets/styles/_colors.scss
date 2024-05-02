@@ -1,0 +1,111 @@
+:root {
+    /* CTA 01 - Caramel Variations:
+    ================================================== */
+    --cta01-caramel-50: #F9F2EC;
+    --cta01-caramel-100: #F3E6D8;
+    --cta01-caramel-200: #E6CCB2;
+    --cta01-caramel-300: #DAB38B;
+    --cta01-caramel-400: #CE9964;
+    --cta01-caramel-500: #B7793A;
+    --cta01-caramel-600: #9B6631;
+    --cta01-caramel-700: #744D25;
+    --cta01-caramel-800: #4D3319;
+    --cta01-caramel-900: #271A0C;
+    --cta01-caramel-950: #130D06;
+
+    /* CTA 02 - Gorgeous Green Variations:
+    ================================================== */
+    --cta02-green-50: #ECF9EE;
+    --cta02-green-100: #D9F2DD;
+    --cta02-green-200: #B3E5BA;
+    --cta02-green-300: #8CD998;
+    --cta02-green-400: #66CC76;
+    --cta02-green-500: #267131;
+    --cta02-green-600: #339943;
+    --cta02-green-700: #267332;
+    --cta02-green-800: #1A4C21;
+    --cta02-green-900: #0D2611;
+    --cta02-green-950: #061308;
+
+    /* Main Color - Blue Navy Peony Variations:
+    ================================================== */
+    --main-blue-100: #DAE4F1;
+    --main-blue-200: #B4CAE4;
+    --main-blue-300: #8FAFD6;
+    --main-blue-400: #6A94C8;
+    --main-blue-500: #223D5D;
+    --main-blue-600: #376195;
+    --main-blue-700: #294970;
+    --main-blue-800: #1B314B;
+    --main-blue-900: #0E1825;
+    --main-blue-950: #070C13;
+
+    /* White Color 01 - Pastel Igloo Variations:
+    ================================================== */
+    --white01-50: #F7F2ED;
+    --white01-100: #F0E6DB;
+    --white01-200: #E0CCB8;
+    --white01-300: #D1B394;
+    --white01-400: #C29970;
+    --white01-500: #FCFAF8;
+    --white01-600: #8F663D;
+    --white01-700: #6B4D2E;
+    --white01-800: #47331F;
+    --white01-900: #241A0F;
+    --white01-950: #120D08;
+
+     /* White Color 01 - Pastel Igloo Variations:
+    ================================================== */
+    --white02-50: #F6F1EE;
+    --white02-100: #EDE2DE;
+    --white02-200: #DCC5BC;
+    --white02-300: #CAA89B;
+    --white02-400: #B88C7A;
+    --white02-500: #F7F2F0;
+    --white02-600: #855947;
+    --white02-700: #644235;
+    --white02-800: #432C23;
+    --white02-900: #211612;
+    --white02-950: #110B09;
+
+    /* Black Color 01 - Eerie Black Variations::after
+    ================================================== */
+    --black01-50: #F2F2F2;
+    --black01-100: #E6E6E6;
+    --black01-200: #CCCCCC;
+    --black01-300: #B3B3B3;
+    --black01-400: #999999;
+    --black01-500: #1B1B1B;
+    --black01-600: #666666;
+    --black01-700: #4D4D4D;
+    --black01-800: #333333;
+    --black01-900: #1A1A1A;
+    --black01-950: #0D0D0D;
+
+    /* Components Colors:
+    ================================================== */
+        /* Background Color: 
+        ============================================== */
+        --bg: var(--white02-500);
+
+        /* Text Color:
+        ============================================== */
+        --titles: var(--black01-950);
+        --subheadings: var(--black01-500);
+
+        --body-text: var(--black01-500);
+        --body-text-shadow: var(--white01-500);
+
+        --navbar-active-link-dark: var(--black01-500);
+        --navbar-active-link02-light: var(--white01-500);
+        --navbar-inactive-link-: var(--black01-300);
+        --navbar-inactive-link-700: var(--black01-700);
+        
+        --links: var(--main-blue-600);
+
+        --cta-text-light: var(--white01-500);
+        --cta-text-dark: var(--black01-500);
+        --cta-text-green: var(--cta02-green-500);
+        --cta-text-blue: var(--main-blue-500);
+    
+}
