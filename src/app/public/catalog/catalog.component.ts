@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-catalog',
+  standalone: true,
+  imports: [],
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.scss']
+  styleUrl: './catalog.component.scss'
 })
 export class CatalogComponent {
 

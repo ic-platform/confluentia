@@ -6,10 +6,12 @@ describe('CertificateComponent', () => {
   let component: CertificateComponent;
   let fixture: ComponentFixture<CertificateComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [CertificateComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [CertificateComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(CertificateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

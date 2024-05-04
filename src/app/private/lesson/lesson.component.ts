@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-lesson',
+  standalone: true,
+  imports: [],
   templateUrl: './lesson.component.html',
-  styleUrls: ['./lesson.component.scss']
+  styleUrl: './lesson.component.scss'
 })
 export class LessonComponent {
 

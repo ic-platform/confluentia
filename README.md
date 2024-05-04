@@ -20,7 +20,7 @@ This is a project made by FUMEC students with the intention to build a web cours
 
 ## Important Data
 
-This project was generated with Angular CLI in version 16.1.3.
+This project was generated with Angular CLI in version 17.3.6.
 The project is using the following packages:
 
   * Tailwind CSS.
