@@ -1,1 +1,19 @@
-<p>main works!</p>
+<div class="flex flex-col h-screen p-4 pb-0">
+    <app-header-just-logo class="flex-none pt-6"></app-header-just-logo>
+
+    <main class="flex-1 flex gap-3 w-full justify-center content-center">
+        <div class="flex flex-col" *ngFor="let e of buttonsFirstRow, let i = index" >
+            <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+        </div>
+
+        <div class="flex flex-col" *ngFor="let e of buttonsSecondRow, let i = index">
+            <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+        </div>
+    </main>
+
+    <app-fumec-footer class="flex-none"></app-fumec-footer>
+</div>
+
+<svg class="-z-10 absolute w-full h-auto -bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 378" fill="none">
+    <path d="M1453.34 159.47V388.28H-13.19V117C70.18 30.1997 204.1 -6.29033 327.4 0.909674C476.58 9.63967 617.19 69.2997 759.16 115.91C764.84 117.76 770.53 119.62 776.16 121.43H776.22C877.1 135.09 978.07 148.24 1079.46 156.79C1203.35 167.27 1329.44 170.44 1453.34 159.47Z" fill="#223D5D"/>
+</svg>

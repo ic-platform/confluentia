@@ -1,0 +1,13 @@
+button {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    padding: 2.5rem 3.12rem;
+    border-radius: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.93rem;
+    width: 15rem;
+    height: auto;
+}
