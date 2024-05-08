@@ -1,6 +1,8 @@
 button {
     background-color: var(--card-bg);
-    color: var(--card-text);
+    color: var(--cta01-caramel-500);
+    font-weight: 600;
+    font-size: 1.2rem;
     padding: 2.5rem 3.12rem;
     border-radius: 1.2em;
     display: flex;
@@ -10,4 +12,13 @@ button {
     gap: 0.93rem;
     width: 15rem;
     height: auto;
+
+    img{
+        width: 3.12rem;
+        height: 3.12rem;
+    }
+}
+
+button:hover {
+    background: linear-gradient(0deg, rgba(27, 27, 27, 0.02) 0%, rgba(27, 27, 27, 0.05) 100%), #FCFAF8;
 }

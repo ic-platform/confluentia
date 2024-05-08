@@ -1,0 +1,28 @@
+<div class="">
+    <div class="card-bg flex flex-col justify-center content-center">
+        <div>
+            <p>{{param.heading}}</p>
+            <span>{{param.subheading}}</span>
+        </div>
+
+        <div>
+            <span>{{param.firstInputName}}</span>
+            <input type="{{param.firstInputType}}" name="{{param.firstInputType}}">
+
+            <span>{{param.secondInputType}}</span>
+            <input type="{{param.secondInputType}}" name="{{param.secondInputType}}">
+
+            <span [routerLink]="[param.aTagLink]">{{param.aTagText}}</span>
+        </div>
+
+        <div>
+            <button [routerLink]="[param.leftButtonLink]">{{param.leftButtonText}}</button>
+            <button [routerLink]="[param.rightButtonLink]">{{param.rightButtonText}}</button>
+        </div>
+    </div>
+
+    <div>
+        <p [routerLink]="['/contact']">Fale Conosco</p>
+        <p [routerLink]="['/terms']">Termos</p>
+    </div>
+</div>

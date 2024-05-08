@@ -1,0 +1,3 @@
+@mixin svg-bottom() {
+  @apply -z-10 absolute w-full h-auto -bottom-0;
+}

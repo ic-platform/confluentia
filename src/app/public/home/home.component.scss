@@ -1,3 +1,5 @@
+@use "../../../assets/styles/utility-classes" as *;
+
 main{
     p{
         color: var(--body-text);

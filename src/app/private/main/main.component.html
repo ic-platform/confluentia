@@ -1,13 +1,17 @@
-<div class="flex flex-col h-screen p-4 pb-0">
+<div class="flex flex-col h-screen">
     <app-header-just-logo class="flex-none pt-6"></app-header-just-logo>
 
-    <main class="flex-1 flex gap-3 w-full justify-center content-center">
-        <div class="flex flex-col" *ngFor="let e of buttonsFirstRow, let i = index" >
-            <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+    <main class="flex flex-col flex-1 gap-5 w-full h-full justify-center content-center">
+        <div class="flex justify-center content-center gap-5 ">
+            <div *ngFor="let e of buttonsFirstRow, let i = index">
+                <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+            </div>
         </div>
 
-        <div class="flex flex-col" *ngFor="let e of buttonsSecondRow, let i = index">
-            <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+        <div class="flex justify-center content-center gap-5">
+            <div *ngFor="let e of buttonsSecondRow, let i = index">
+                <app-menu-buttons [param]="buttonsSecondRow[i]"></app-menu-buttons>
+            </div>
         </div>
     </main>
 

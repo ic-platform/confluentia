@@ -11,15 +11,34 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-  buttonsFirstRow: Array<any> = [
-    { iconPath: '../../../assets/icons/catalogIcon.svg', buttonName: 'Catálogo', link: '/catalog' },
-    { iconPath: '../../../assets/icons/certificateIcon.svg', buttonName: 'Certificados', link: '/certificate' },
-    { iconPath: '../../../assets/icons/myCoursesIcon.svg', buttonName: 'Meus Cursos', link: '/my-courses' }
-  ]
+  buttonsFirstRow: Array<any> = [];
 
-  buttonsSecondRow: Array<any> = [
-    { iconPath: '../../../assets/icons/manageIcon.svg', buttonName: 'Gerenciar', link: '/manage' },
-    { iconPath: '../../../assets/icons/profileIcon.svg', buttonName: 'Editar Perfil', link: '/profile' },
-    { iconPath: '../../../assets/icons/contactIcon.svg', buttonName: 'Fale Conosco', link: '/contact' }
-  ]
+  buttonsSecondRow: Array<any> = [];
+
+  isUserStudent: boolean = false;
+
+  defineButtons(): void {
+    // First Row:
+     this.buttonsFirstRow = [
+      { iconPath: '../../../assets/icons/catalogIcon.svg', buttonName: 'Catálogo', link: '/catalog' },
+      { iconPath: '../../../assets/icons/certificateIcon.svg', buttonName: 'Certificados', link: '/certificate' },
+      { iconPath: '../../../assets/icons/myCoursesIcon.svg', buttonName: 'Meus Cursos', link: '/my-courses' }
+    ]
+
+    // Second Row:
+      this.buttonsSecondRow = [
+        { iconPath: '../../../assets/icons/profileIcon.svg', buttonName: 'Editar Perfil', link: '/profile' },
+        { iconPath: '../../../assets/icons/contactIcon.svg', buttonName: 'Fale Conosco', link: '/contact' }
+      ]
+
+      if (!this.isUserStudent) {
+        this.buttonsSecondRow.unshift(
+          { iconPath: '../../../assets/icons/manageIcon.svg', buttonName: 'Gerenciar', link: '/manage' },
+        )
+      }
+  }
+
+  ngOnInit() {
+    this.defineButtons();
+  }
 }

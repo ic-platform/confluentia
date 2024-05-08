@@ -1,0 +1,5 @@
+@use "./mixins" as *;
+
+.svg-bottom {
+    @include svg-bottom;
+}

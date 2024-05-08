@@ -5,6 +5,7 @@ import { FumecFooterComponent } from './fumec-footer/fumec-footer.component';
 import { HeaderWithNavbarComponent } from './header-with-navbar/header-with-navbar.component';
 import { HeaderJustLogoComponent } from './header-just-logo/header-just-logo.component';
 import { MenuButtonsComponent } from './menu-buttons/menu-buttons.component';
+import { LoginAndSignUpCardComponent } from './login-and-sign-up-card/login-and-sign-up-card.component';
 
 @NgModule({
   declarations: [],
@@ -14,6 +15,7 @@ import { MenuButtonsComponent } from './menu-buttons/menu-buttons.component';
     FumecFooterComponent,
     HeaderWithNavbarComponent,
     HeaderJustLogoComponent,
+    LoginAndSignUpCardComponent,
     MenuButtonsComponent
   ],
   exports: [
@@ -21,6 +23,7 @@ import { MenuButtonsComponent } from './menu-buttons/menu-buttons.component';
     FumecFooterComponent,
     HeaderWithNavbarComponent,
     HeaderJustLogoComponent,
+    LoginAndSignUpCardComponent,
     MenuButtonsComponent
   ]
 })
