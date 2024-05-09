@@ -26,18 +26,18 @@ export class LoginAndSignUpCardComponent {
 
   constructor() {
     this.param = {
-      heading: 'Welcome Back!',
-      subHeading: 'Please login to your account',
+      heading: 'Log In',
+      subHeading: 'Entre com seu email e senha',
       firstInputName: 'Email',
       firstInputType: 'email',
-      secondInputName: 'Password',
+      secondInputName: 'Senha',
       secondInputType: 'password',
-      aTagText: 'Forgot Password?',
+      aTagText: 'Esqueceu a senha?',
       aTagLink: '/forgot-password',
-      leftButtonText: 'Login',
-      leftButtonLink: '/login',
-      rightButtonText: 'Sign Up',
-      rightButtonLink: '/sign-up'
+      leftButtonText: 'Criar Conta',
+      leftButtonLink: '/sign-up',
+      rightButtonText: 'Entrar',
+      rightButtonLink: '/main'
     }
   }
 }
