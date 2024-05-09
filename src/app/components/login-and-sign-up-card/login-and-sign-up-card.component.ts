@@ -33,11 +33,19 @@ export class LoginAndSignUpCardComponent {
       secondInputName: 'Senha',
       secondInputType: 'password',
       aTagText: 'Esqueceu a senha?',
-      aTagLink: '/forgot-password',
+      aTagRoute: '/forgot-password',
       leftButtonText: 'Criar Conta',
-      leftButtonLink: '/sign-up',
+      leftButtonFunc: () => console.log('Left Button Clicked'),
       rightButtonText: 'Entrar',
-      rightButtonLink: '/main'
+      rightButtonFunc: () => console.log('Left Button Clicked')
     }
+  }
+
+  onLeftButtonClick(): void {
+    this.param.leftButtonLink();
+  }
+
+  onRightButtonClick(): void {
+    this.param.rightButtonLink();
   }
 }

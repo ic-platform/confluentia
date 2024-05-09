@@ -16,12 +16,12 @@
                 <input type="{{param.secondInputType}}" name="{{param.secondInputType}}">
             </p>
 
-            <span class="text-left text-sm forgot underline cursor-pointer" [routerLink]="[param.aTagLink]">{{param.aTagText}}</span>
+            <span class="text-left text-sm forgot underline cursor-pointer" [routerLink]="[param.aTagRoute]">{{param.aTagText}}</span>
         </div>
 
         <div class="flex gap-4 justify-end pb-4">
-            <button [routerLink]="[param.leftButtonLink]">{{param.leftButtonText}}</button>
-            <button class="right-button" [routerLink]="[param.rightButtonLink]">{{param.rightButtonText}}</button>
+            <button (click)="param.leftButtonFunc()">{{param.leftButtonText}}</button>
+            <button class="right-button" (click)="param.rightButtonFunc()">{{param.rightButtonText}}</button>
         </div>
     </div>
 
