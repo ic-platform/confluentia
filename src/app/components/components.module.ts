@@ -6,7 +6,6 @@ import { HeaderWithNavbarComponent } from './header-with-navbar/header-with-navb
 import { HeaderJustLogoComponent } from './header-just-logo/header-just-logo.component';
 import { MenuButtonsComponent } from './menu-buttons/menu-buttons.component';
 import { LoginAndSignUpCardComponent } from './login-and-sign-up-card/login-and-sign-up-card.component';
-import { HeaderJustLogoWhiteComponent } from './header-just-logo-white/header-just-logo-white.component';
 
 @NgModule({
   declarations: [],
@@ -18,7 +17,6 @@ import { HeaderJustLogoWhiteComponent } from './header-just-logo-white/header-ju
     HeaderJustLogoComponent,
     LoginAndSignUpCardComponent,
     MenuButtonsComponent,
-    HeaderJustLogoWhiteComponent
   ],
   exports: [
     HeaderComponent,
@@ -27,7 +25,6 @@ import { HeaderJustLogoWhiteComponent } from './header-just-logo-white/header-ju
     HeaderJustLogoComponent,
     LoginAndSignUpCardComponent,
     MenuButtonsComponent,
-    HeaderJustLogoWhiteComponent
   ]
 })
 export class ComponentsModule { }
