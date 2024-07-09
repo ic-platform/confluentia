@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentsModule } from '../../components/components.module';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentitcation/authentication.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class SignInComponent {
   paramObj: any = {};
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private authService: AuthenticationService) { 
     this.paramObj = {
       heading: 'Log In',
       subHeading: 'Entre com seu email e senha',
@@ -28,14 +29,25 @@ export class SignInComponent {
         
         this.router.navigate(['/sign-up']);
       },
-      rightButtonText: 'Entrar',
-      rightButtonFunc: () => {
-        console.log('Entrar');
-        
-        this.router.navigate(['/main']);
-      }
+      rightButtonText: 'Entrar'
     };
   }
 
+  onLogin(credentials: { email: string; password: string }) {
+    this.paramObj.rightButtonFunc = async () => {
+      console.log('Entrar');
 
+      const { email, password } = credentials;
+
+      console.log(email, password);
+
+      try {
+        const response = await this.authService.signIn(email, password);
+        console.log('User logged in successfully', response);
+        this.router.navigate(['/main']);
+      } catch (error) {
+        console.error('Login failed', error);
+      }
+    };
+  }
 }

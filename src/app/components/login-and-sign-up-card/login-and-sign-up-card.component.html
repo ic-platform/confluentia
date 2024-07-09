@@ -8,12 +8,12 @@
         <div class="flex-col-center gap-4 pt-2">
             <p class="text-left flex flex-col">
                 <span class="text-base font-light">{{param.firstInputName}}</span>
-                <input class="" type="{{param.firstInputType}}" name="{{param.firstInputType}}">
+                <input class="" ngModel type="{{param.firstInputType}}" name="{{param.firstInputType}}">
             </p>
 
             <p class="text-left flex flex-col">
                 <span class="text-base font-light">{{param.secondInputName}}</span>
-                <input type="{{param.secondInputType}}" name="{{param.secondInputType}}">
+                <input ngModel type="{{param.secondInputType}}" name="{{param.secondInputType}}">
             </p>
 
             <span class="text-left text-sm forgot underline cursor-pointer" [routerLink]="[param.aTagRoute]">{{param.aTagText}}</span>

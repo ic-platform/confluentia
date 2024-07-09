@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -22,6 +22,13 @@ export class LoginAndSignUpCardComponent {
     leftButtonLink: '',
     rightButtonText: '',
     rightButtonLink: ''
+  }
+
+  @Output() login = new EventEmitter<{ email: string; password: string }>();
+
+  // Method to emit the credentials
+  emitLoginCredentials(email: string, password: string) {
+    this.login.emit({ email, password });
   }
 
   constructor() {
