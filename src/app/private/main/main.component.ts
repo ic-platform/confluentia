@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ComponentsModule } from '../../components/components.module';
 import { CommonModule } from '@angular/common';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentitcation/authentication.service';
 
 @Component({
   selector: 'app-main',
@@ -11,6 +13,15 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+  constructor(private router: Router, private authService: AuthenticationService) {
+
+  }
+
+  type: any = {
+    colorful: true,
+    white: false,
+  }
+
   buttonsFirstRow: Array<any> = [];
 
   buttonsSecondRow: Array<any> = [];
@@ -36,6 +47,12 @@ export class MainComponent {
           { iconPath: '../../../assets/icons/manageIcon.svg', buttonName: 'Gerenciar', link: '/manage' },
         )
       }
+  }
+
+  logoutUser() {
+    const result = this.authService.logout();
+    console.log(result);
+    this.router.navigate(['/login']);
   }
 
   ngOnInit() {

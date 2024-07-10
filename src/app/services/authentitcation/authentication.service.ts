@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { StudentModel } from '../../models/student-model';
+import { UserModel } from '../../models/student-model';
 import axios from 'axios';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class AuthenticationService {
     - Create the user in Supabase DB.
     - Get Supabase Access Token for the session:
   ==============================================================================*/
-    async signUp(studentObj: StudentModel) {
+    async signUp(studentObj: UserModel) {
       return await axios.post(this.url + '/student', { studentObj });
     }
 
@@ -26,5 +26,13 @@ export class AuthenticationService {
   ==============================================================================*/
     async signIn(email: string, password: string) {
       return await axios.post(this.url + '/login', { email, password });
+    }
+
+  /* Logouting user:
+    - Logouting the user from Supabase Auth.
+    - Destroy the Supabase Access Token for the session:
+  ==============================================================================*/
+    async logout() {
+      return await axios.get(this.url + '/logout');
     }
 }
