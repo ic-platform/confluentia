@@ -1,21 +1,39 @@
 import { Component } from '@angular/core';
 import { ComponentsModule } from '../../components/components.module';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { UserModel } from '../../models/student-model';
+import { FormsModule } from '@angular/forms';
+import { AuthenticationService } from '../../services/authentitcation/authentication.service';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [CommonModule, ComponentsModule],
+  imports: [CommonModule, ComponentsModule, RouterLink, FormsModule],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
+
   steps: { [key: string]: boolean } = { step1: false, step2: false }
+  type: any = {
+    colorful: true,
+    white: false,
+  }
+  errorMessage: any | null = null;
+  firstName: string | null = null;
+  secondName: string | null = null;
+  credentials: UserModel = {
+    name: '',
+    email: '',
+    phone: '',
+    password: '',
+    role: 'student'
+  };
   paramObj1: any = {};
   paramObj2: any = {};
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthenticationService ) {
     this.steps ={
       step1: true,
       step2: false,
@@ -69,6 +87,17 @@ export class SignUpComponent {
       }
     };
 
+  }
+
+  async onSignUp(credentials: UserModel) {
+    // Setting first name and second into the variable name:
+      credentials.name = this.firstName + " " + this.secondName;
+
+    // Connecting to the server to sign up the user:
+      const result = await this.authService.signUp(credentials);
+    
+    // Returning the result:
+      console.log(result);
   }
 
 }

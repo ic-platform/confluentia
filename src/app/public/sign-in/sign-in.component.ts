@@ -4,16 +4,19 @@ import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../../services/authentitcation/authentication.service';
 import { UserModel } from '../../models/student-model';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [ComponentsModule, FormsModule, RouterLink],
+  imports: [ComponentsModule, FormsModule, RouterLink, CommonModule],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss'
 })
 export class SignInComponent {
   paramObj: any = {};
+
+  errorMessage: any | null = null;
 
   type: any = {
     colorful: true,
@@ -57,6 +60,7 @@ export class SignInComponent {
         console.log('User logged in successfully', response);
         this.router.navigate(['/main']);
       } catch (error) {
+        this.errorMessage = error;
         console.error('Login failed', error);
       }
   }

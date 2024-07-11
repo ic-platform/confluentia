@@ -9,6 +9,10 @@
         <span class="font-normal text-base">{{paramObj.subHeading}}</span>
       </div>
 
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
       <div class="flex-col-center gap-4 pt-2">
         <p class="text-left flex flex-col">
           <span class="text-base font-light">{{paramObj.firstInputName}}</span>
