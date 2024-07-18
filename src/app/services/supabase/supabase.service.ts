@@ -17,4 +17,8 @@ export class SupabaseService {
   onAuthStateChange(callback: (event: string, session: any) => void) {
     this.supabase.auth.onAuthStateChange(callback);
   }
+
+  get supabaseClient() {
+    return this.supabase;
+  }
 }
