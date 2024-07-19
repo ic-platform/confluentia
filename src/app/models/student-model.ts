@@ -5,3 +5,9 @@ export interface UserModel {
     password: string;
     role?: string;
 }
+
+export interface resultSignUp {
+    success: string, 
+    data: object,
+    message: string
+}

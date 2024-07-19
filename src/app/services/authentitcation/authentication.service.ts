@@ -1,6 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { SupabaseService } from '../supabase/supabase.service'; // Import SupabaseService
-import { UserModel } from '../../models/student-model';
+import { resultSignUp, UserModel } from '../../models/student-model';
+import axios from 'axios';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,7 @@ export class AuthenticationService {
     - Get Supabase Access Token for the session:
   ==============================================================================*/
   async signUp(studentObj: UserModel) {
-    const { user, session, error } = await this.supabase.auth.signUp({
+    const { data , error } = await this.supabase.auth.signUp({
       email: studentObj.email,
       password: studentObj.password,
     });
@@ -30,22 +32,14 @@ export class AuthenticationService {
     }
 
     // After successful sign-up, insert user data into your Supabase database
-    const { data: dbUser, error: dbError } = await this.supabase
-      .from('your_user_table_name') // Replace with your actual table name
-      .insert({
-        name: studentObj.name,
-        email: studentObj.email,
-        phone: studentObj.phone,
-        // ... other user data
-      });
+      const result: Promise<resultSignUp> = axios.post(environment.server, { studentObj });
 
-    if (dbError) {
-      console.error('Error inserting user data:', dbError);
-      // Handle the database error
-      return dbError;
-    }
+      if ((await result).success == null ) {
+        console.log(result);
+        return ;
+      } 
 
-    return { user, session };
+      return { data };
   }
 
   /* Sign-in:
