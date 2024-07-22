@@ -17,6 +17,8 @@ import { ManagerRegisterComponent } from './private/manager-pages/manager-regist
 import { CourseRegisterComponent } from './private/manager-pages/course-register/course-register.component';
 import { ManageSiteComponent } from './private/manager-pages/manage-site/manage-site.component';
 import { ErrorPageComponent } from './public/error-page/error-page.component';
+import { ForgetPasswordComponent } from './public/forget-password/forget-password.component';
+import { UpdatePasswordComponent } from './private/update-password/update-password.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,6 +28,8 @@ export const routes: Routes = [
     { path: 'certificate', component: CertificateComponent },
     { path: 'login', component: SignInComponent },
     { path: 'sign-up', component: SignUpComponent },
+    { path: 'forget-password', component: ForgetPasswordComponent  },
+    { path: 'update-password', component: UpdatePasswordComponent },
     { path: 'terms', component: TermsComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'main', component: MainComponent },

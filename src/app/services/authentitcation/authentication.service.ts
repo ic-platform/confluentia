@@ -77,5 +77,23 @@ export class AuthenticationService {
     return null;
     
   }
-}
 
+  /* Forget Password:
+   - Send a password reset email to the user's registered email address.
+   - Get the email reset link from the Supabase Auth API:
+  ==============================================================================*/
+  async forgotPassword(email: string) {
+    const { error } = await this.supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: 'https://confluentia.vercel.app/update-password'
+    });
+  
+    if (error) {
+      console.error('Error during forgot password:', error);
+      // Handle the error appropriately (e.g., display an error message)
+      return error;
+    }
+    
+    const feedback = "A password reset link has been sent to your email address.";
+    return feedback;
+  }
+}

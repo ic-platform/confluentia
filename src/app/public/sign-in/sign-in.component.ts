@@ -39,7 +39,7 @@ export class SignInComponent {
       secondInputName: 'Senha',
       secondInputType: 'password',
       aTagText: 'Esqueceu a senha?',
-      aTagRoute: '/forgot-password',
+      aTagRoute: '/forget-password',
       leftButtonText: 'Criar Conta',
       leftButtonFunc: () => {
         console.log('Sign Up');
