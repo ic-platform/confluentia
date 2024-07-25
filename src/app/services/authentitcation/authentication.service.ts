@@ -96,4 +96,15 @@ export class AuthenticationService {
     const feedback = "A password reset link has been sent to your email address.";
     return feedback;
   }
+
+  async resetPassword(pass) {
+    const { data, error } = await this.supabase.auth.updateUser({
+      password: pass
+    })
+
+    if (error)      
+      return error;
+
+    return { data };
+  }
 }
