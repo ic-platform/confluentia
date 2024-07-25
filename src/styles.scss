@@ -1,5 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./assets/styles/reset";
+@import "./assets/styles/colors";
+@import "./assets/styles/mixins";
+@import "./assets/styles/typography";
+@import "./assets/styles/utility-classes";
+
+body {
+    background-color: var(--bg);
+}

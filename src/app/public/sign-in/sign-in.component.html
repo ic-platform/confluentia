@@ -1,0 +1,46 @@
+<div class="flex flex-col-center flex-1 justify-center items-center h-full w-full">
+  <app-header-just-logo class="flex-none" [type]="type"></app-header-just-logo>
+
+  <!-- Begin integrated login card -->
+  <div class="w-2/6 h-2/5 p-8 holder-card">
+    <div class="card-bg flex-col-center gap-4 p-8 rounded-3xl">
+      <div class="flex-col-center gap-4 pt-4">
+        <p class="font-semibold text-3xl">{{paramObj.heading}}</p>
+        <span class="font-normal text-base">{{paramObj.subHeading}}</span>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <div class="flex-col-center gap-4 pt-2">
+        <p class="text-left flex flex-col">
+          <span class="text-base font-light">{{paramObj.firstInputName}}</span>
+          <input class="" [(ngModel)]="credentials.email" type="{{paramObj.firstInputType}}" name="{{paramObj.firstInputType}}">
+        </p>
+
+        <p class="text-left flex flex-col">
+          <span class="text-base font-light">{{paramObj.secondInputName}}</span>
+          <input [(ngModel)]="credentials.password" type="{{paramObj.secondInputType}}" name="{{paramObj.secondInputType}}">
+        </p>
+
+        <span class="text-left text-sm forgot underline cursor-pointer" [routerLink]="[paramObj.aTagRoute]">{{paramObj.aTagText}}</span>
+      </div>
+
+      <div class="flex gap-4 justify-end pb-4">
+        <button (click)="paramObj.leftButtonFunc()">{{paramObj.leftButtonText}}</button>
+        <button class="right-button" (click)="onLogin(credentials)">{{paramObj.rightButtonText}}</button>
+      </div>
+    </div>
+
+    <div class="flex flex-1 gap-4 justify-end items-start pr-8 pt-4 text-sm">
+        <p class="cursor-pointer hover:text-slate-600" [routerLink]="['/contact']">Fale Conosco</p>
+        <p class="cursor-pointer hover:text-slate-600" [routerLink]="['/terms']">Termos</p>
+    </div>
+  </div>
+  <!-- End integrated login card -->
+
+  <svg class="svg-bottom min-w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 178" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 56.2625L30 51.1901C60 46.1177 112 15.6833 172 20.7557C232 25.8281 300 66.4073 360 71.4797C420 76.5521 480 66.4073 540 41.0453C600 15.6833 650.5 -10.2172 710.5 5C770.5 20.2172 840 76.5521 900 96.8417C960 117.131 1020 86.6969 1080 61.3349C1140 35.9729 1200 -0.072329 1260 5.00007C1320 10.0725 1380 56.2625 1410 71.4797L1440 86.6969V178H1410C1380 178 1320 178 1260 178C1200 178 1140 178 1080 178C1020 178 960 178 900 178C840 178 780 178 720 178C660 178 600 178 540 178C480 178 420 178 360 178C300 178 240 178 180 178C120 178 60 178 30 178H0V56.2625Z" fill="#223D5D"/>
+  </svg>
+</div>

@@ -1,0 +1,32 @@
+<div class="w-2/6 h-2/5 p-8 holder-card">
+    <div class="card-bg flex-col-center gap-4 p-8 rounded-3xl">
+        <div class="flex-col-center gap-4 pt-4">
+            <p class="font-semibold text-3xl">{{param.heading}}</p>
+            <span class="font-normal text-base">{{param.subHeading}}</span>
+        </div>
+
+        <div class="flex-col-center gap-4 pt-2">
+            <p class="text-left flex flex-col">
+                <span class="text-base font-light">{{param.firstInputName}}</span>
+                <input class="" ngModel type="{{param.firstInputType}}" name="{{param.firstInputType}}">
+            </p>
+
+            <p class="text-left flex flex-col">
+                <span class="text-base font-light">{{param.secondInputName}}</span>
+                <input ngModel type="{{param.secondInputType}}" name="{{param.secondInputType}}">
+            </p>
+
+            <span class="text-left text-sm forgot underline cursor-pointer" [routerLink]="[param.aTagRoute]">{{param.aTagText}}</span>
+        </div>
+
+        <div class="flex gap-4 justify-end pb-4">
+            <button (click)="param.leftButtonFunc()">{{param.leftButtonText}}</button>
+            <button class="right-button" (click)="param.rightButtonFunc()">{{param.rightButtonText}}</button>
+        </div>
+    </div>
+
+    <div class="flex gap-4 justify-end pr-8 pt-4 text-sm">
+        <p class="cursor-pointer hover:text-slate-600" [routerLink]="['/contact']">Fale Conosco</p>
+        <p class="cursor-pointer hover:text-slate-600" [routerLink]="['/terms']">Termos</p>
+    </div>
+</div>
