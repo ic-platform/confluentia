@@ -97,7 +97,7 @@ export class AuthenticationService {
     return feedback;
   }
 
-  async resetPassword(pass) {
+  async resetPassword(pass: string) {
     const { data, error } = await this.supabase.auth.updateUser({
       password: pass
     })
