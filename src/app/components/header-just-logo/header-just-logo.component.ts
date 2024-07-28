@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-just-logo',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './header-just-logo.component.scss'
 })
 export class HeaderJustLogoComponent {
-
+  @Input() type: any = {
+    colorful: false,
+    white: false,
+  };
 }
