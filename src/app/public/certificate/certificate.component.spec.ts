@@ -11,7 +11,7 @@ describe('CertificateComponent', () => {
       imports: [CertificateComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(CertificateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

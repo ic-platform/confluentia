@@ -11,7 +11,7 @@ describe('ErrorPageComponent', () => {
       imports: [ErrorPageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ErrorPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

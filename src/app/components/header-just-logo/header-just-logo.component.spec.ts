@@ -11,7 +11,7 @@ describe('HeaderJustLogoComponent', () => {
       imports: [HeaderJustLogoComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(HeaderJustLogoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

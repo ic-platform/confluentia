@@ -11,7 +11,7 @@ describe('MeetUsComponent', () => {
       imports: [MeetUsComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(MeetUsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

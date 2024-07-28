@@ -11,7 +11,7 @@ describe('ForgetPasswordComponent', () => {
       imports: [ForgetPasswordComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ForgetPasswordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

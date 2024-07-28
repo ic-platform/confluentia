@@ -1,13 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* TailwindCSS Imports:
+==============================================================================*/
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
-@import "./assets/styles/reset";
-@import "./assets/styles/colors";
-@import "./assets/styles/mixins";
-@import "./assets/styles/typography";
-@import "./assets/styles/utility-classes";
-
-body {
-    background-color: var(--bg);
-}
+/* SCSS Modules Imports:
+==============================================================================*/
+    

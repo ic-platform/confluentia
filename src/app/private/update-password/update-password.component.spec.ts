@@ -11,7 +11,7 @@ describe('UpdatePasswordComponent', () => {
       imports: [UpdatePasswordComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(UpdatePasswordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

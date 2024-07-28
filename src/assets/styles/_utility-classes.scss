@@ -1,6 +1,0 @@
-@use "./mixins" as *;
-
-.svg-bottom { @include svg-bottom; }
-
-.flex-center{ @include flex-center; }
-.flex-col-center{ @include flex-col-center; }

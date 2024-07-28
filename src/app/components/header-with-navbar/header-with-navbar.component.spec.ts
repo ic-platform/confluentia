@@ -11,7 +11,7 @@ describe('HeaderWithNavbarComponent', () => {
       imports: [HeaderWithNavbarComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(HeaderWithNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

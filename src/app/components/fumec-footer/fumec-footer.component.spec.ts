@@ -11,7 +11,7 @@ describe('FumecFooterComponent', () => {
       imports: [FumecFooterComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(FumecFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
