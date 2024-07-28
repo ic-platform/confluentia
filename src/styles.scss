@@ -6,4 +6,14 @@
 
 /* SCSS Modules Imports:
 ==============================================================================*/
-    
+    @import "./assets/styles/reset";
+    @import "./assets/styles/colors";
+    @import "./assets/styles/mixins";
+    @import "./assets/styles/typography";
+    @import "./assets/styles/utility-classes";
+
+/* Global Styles:
+==============================================================================*/
+    body {
+        background-color: var(--bg);
+    }

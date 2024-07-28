@@ -1,1 +1,28 @@
-<p>main works!</p>
+<div class="flex flex-col h-screen">
+    <div class="logout-navbar flex flex-row flex-1 justify-center items-center max-h-36">
+        <app-header-just-logo class="flex-auto justify-center w-11/12 pl-24" [type]="type"></app-header-just-logo>
+        <div class="flex-none w-1/12 items-start mr-16">
+            <button class="h-12 w-24" (click)="logoutUser()">Logout</button>
+        </div>
+    </div>
+
+    <main class="flex flex-col flex-1 gap-5 w-full h-full justify-center content-center">
+        <div class="flex justify-center content-center gap-5 ">
+            <div *ngFor="let e of buttonsFirstRow, let i = index">
+                <app-menu-buttons [param]="buttonsFirstRow[i]"></app-menu-buttons>
+            </div>
+        </div>
+
+        <div class="flex justify-center content-center gap-5">
+            <div *ngFor="let e of buttonsSecondRow, let i = index">
+                <app-menu-buttons [param]="buttonsSecondRow[i]"></app-menu-buttons>
+            </div>
+        </div>
+    </main>
+
+    <app-fumec-footer class="flex-none"></app-fumec-footer>
+</div>
+
+<svg class="-z-10 absolute w-full h-auto -bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 378" fill="none">
+    <path d="M1453.34 159.47V388.28H-13.19V117C70.18 30.1997 204.1 -6.29033 327.4 0.909674C476.58 9.63967 617.19 69.2997 759.16 115.91C764.84 117.76 770.53 119.62 776.16 121.43H776.22C877.1 135.09 978.07 148.24 1079.46 156.79C1203.35 167.27 1329.44 170.44 1453.34 159.47Z" fill="#223D5D"/>
+</svg>

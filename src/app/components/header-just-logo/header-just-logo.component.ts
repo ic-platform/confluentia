@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-just-logo',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,],
   templateUrl: './header-just-logo.component.html',
   styleUrl: './header-just-logo.component.scss'
 })
