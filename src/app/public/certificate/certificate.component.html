@@ -3,8 +3,8 @@
         <path d="M1451.79 -1.41003V195.09C1302.52 231.21 1162.4 347.71 1009.05 324.21C923.25 311.06 850.23 255.44 767.68 228.65C683.2 201.24 588.83 205.54 507.19 240.49C444.57 267.3 389.25 311.34 323.46 329C252.16 348.15 175.46 334 107.01 306.41C60.7 287.8 17.1499 263.32 -26.1801 238.41V-1.41003H1451.79Z" fill="#B77938"/>
         <path d="M1484.55 185.24C1383.88 201 1295 254.75 1201.12 290.92C1155.42 308.53 1107.52 322.53 1058.25 323.92C1006 325.32 957 310 909.89 288.57C863.34 267.37 818.55 241.86 769.79 225.86C719.515 209.514 666.357 203.963 613.79 209.57C561.32 215.12 512.31 232.13 465.92 256.89C420 281.43 375.73 311 325.08 325.11C212.66 356.52 99.3 305.39 3 251.22C-9.51 244.22 -21.95 237.01 -34.39 229.84C-38.09 227.7 -41.39 233.43 -37.73 235.57C57.9 290.74 162.12 349.17 276.6 340.25C329.28 336.15 376 314.54 421.6 289.15C468.99 262.73 515.4 236.29 568.75 223.84C622.433 211.317 678.226 210.853 732.11 222.48C784.42 233.87 831.84 258.41 879.65 281.59C925.34 303.75 972.48 324.34 1023.55 329.34C1071.34 334.02 1119.28 325.34 1164.73 310.83C1260.79 280.2 1347.73 225.42 1445.62 200.06C1459.05 196.58 1472.62 193.773 1486.33 191.64C1490.53 190.98 1488.75 184.64 1484.56 185.24H1484.55Z" fill="#B77938"/>
     </svg>        
-    <app-header [param]="paramLogged"></app-header>
-    <app-header-with-navbar [param]="paramNotLogged"></app-header-with-navbar>
+    <app-header *ngIf="isUserLogged()" [param]="paramLogged"></app-header>
+    <app-header-with-navbar *ngIf="!isUserLogged()" [param]="paramNotLogged"></app-header-with-navbar>
 
     <main class="flex flex-col justify-center items-center w-full">
         <div class="flex flex-row justify-center gap-6 items-center">
@@ -19,11 +19,11 @@
             </div>
         </div>
 
-        <div class="flex justify-center flex-col gap-6 w-full items-center">
+        <form class="flex justify-center flex-col gap-6 w-full items-center text-center bg-slate-400">
             <label for="searchCertificate">Código do Certificado</label>
             <input class="w-3/4" name="searchCertificate" id="searchCertificate" type="search">
             <input type="button" value="Verificar">
-        </div>
+        </form>
 
         <div class="logged">
 
