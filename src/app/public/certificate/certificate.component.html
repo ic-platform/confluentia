@@ -1,36 +1,99 @@
-<div>
+<div class="flex flex-col gap-8">
     <svg width="1440" height="342" class="svg-top" viewBox="0 0 1440 342" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1451.79 -1.41003V195.09C1302.52 231.21 1162.4 347.71 1009.05 324.21C923.25 311.06 850.23 255.44 767.68 228.65C683.2 201.24 588.83 205.54 507.19 240.49C444.57 267.3 389.25 311.34 323.46 329C252.16 348.15 175.46 334 107.01 306.41C60.7 287.8 17.1499 263.32 -26.1801 238.41V-1.41003H1451.79Z" fill="#B77938"/>
         <path d="M1484.55 185.24C1383.88 201 1295 254.75 1201.12 290.92C1155.42 308.53 1107.52 322.53 1058.25 323.92C1006 325.32 957 310 909.89 288.57C863.34 267.37 818.55 241.86 769.79 225.86C719.515 209.514 666.357 203.963 613.79 209.57C561.32 215.12 512.31 232.13 465.92 256.89C420 281.43 375.73 311 325.08 325.11C212.66 356.52 99.3 305.39 3 251.22C-9.51 244.22 -21.95 237.01 -34.39 229.84C-38.09 227.7 -41.39 233.43 -37.73 235.57C57.9 290.74 162.12 349.17 276.6 340.25C329.28 336.15 376 314.54 421.6 289.15C468.99 262.73 515.4 236.29 568.75 223.84C622.433 211.317 678.226 210.853 732.11 222.48C784.42 233.87 831.84 258.41 879.65 281.59C925.34 303.75 972.48 324.34 1023.55 329.34C1071.34 334.02 1119.28 325.34 1164.73 310.83C1260.79 280.2 1347.73 225.42 1445.62 200.06C1459.05 196.58 1472.62 193.773 1486.33 191.64C1490.53 190.98 1488.75 184.64 1484.56 185.24H1484.55Z" fill="#B77938"/>
     </svg>        
-    <app-header *ngIf="isUserLogged()" [param]="paramLogged"></app-header>
-    <app-header-with-navbar *ngIf="!isUserLogged()" [param]="paramNotLogged"></app-header-with-navbar>
+    
+    <div >
+        <app-header class="hidden md:block" *ngIf="isUserLogged()" [param]="paramLogged"></app-header>
+        <app-header-with-navbar class="hidden md:block" *ngIf="!isUserLogged()" [param]="paramNotLogged"></app-header-with-navbar>
+        <app-header-just-logo class="block md:hidden w-full" [type]="type"></app-header-just-logo>
+    </div>
 
-    <main class="flex flex-col justify-center items-center w-full">
-        <div class="flex flex-row justify-center gap-6 items-center">
+    <main class="flex flex-col justify-center items-center w-full gap-6 pb-5 p-2">
+        <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
                     <path d="M57.125 42.1875V34.5313C57.125 31.9205 56.0879 29.4167 54.2418 27.5707C52.3958 25.7246 49.892 24.6875 47.2813 24.6875H42.9063C42.036 24.6875 41.2014 24.3418 40.5861 23.7264C39.9707 23.1111 39.625 22.2765 39.625 21.4063V17.0313C39.625 14.4205 38.5879 11.9167 36.7418 10.0707C34.8958 8.22461 32.392 7.1875 29.7813 7.1875H24.3125M24.3125 44.375H46.1875M24.3125 53.125H35.25M30.875 7.1875H16.6563C14.845 7.1875 13.375 8.6575 13.375 10.4688V60.7813C13.375 62.5925 14.845 64.0625 16.6563 64.0625H53.8438C55.655 64.0625 57.125 62.5925 57.125 60.7813V33.4375C57.125 26.4756 54.3594 19.7988 49.4366 14.8759C44.5137 9.95312 37.8369 7.1875 30.875 7.1875Z" stroke="#223D5D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                  
             </div>
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 text-center md:text-left">
                 <h1>Verificar Certificados</h1>
                 <p>Você pode verificar o código de um certificado pelo campo abaixo 👇</p>
             </div>
         </div>
 
-        <form class="flex justify-center flex-col gap-6 w-full items-center text-center bg-slate-400">
-            <label for="searchCertificate">Código do Certificado</label>
-            <input class="w-3/4" name="searchCertificate" id="searchCertificate" type="search">
-            <input type="button" value="Verificar">
+        <form  class="flex flex-col flex-1 gap-5 justify-center items-center">
+            <div class="flex flex-col gap-2 w-full h-auto justify-center content-center">
+            <label class="ml-3" for="searchCertificate">Código do Certificado</label>
+            <input [(ngModel)]="certificateCodeToSearch" class="searchCertificateInput w-full" name="searchCertificate" id="searchCertificate" type="search">
+            </div>
+            <input class="verify" type="submit" value="Verificar" (click)="searchCertificate(certificateCodeToSearch)">
         </form>
 
-        <div class="logged">
-
+        <div class="pt-4 pb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="203" height="3" viewBox="0 0 203 3" fill="none">
+                <path d="M1.25 1.25H201.25" stroke="#CCCCCC" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
         </div>
 
-        <div class="not-logged">
+        <div *ngIf="foundCertificate.length > 0" class="not-logged flex justify-center items-center flex-col gap-6">
+            <h2>Certificado Encontrado</h2>
+            <div class="card" *ngFor="let certificate of foundCertificate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="67" height="57" viewBox="0 0 67 57" fill="none">
+                    <path d="M10.6749 22.6575C9.87262 28.7988 9.39459 34.978 9.24277 41.1696C17.6393 44.6769 25.6787 48.9843 33.2499 54.0321C40.8219 48.9841 48.8623 44.6767 57.2599 41.1696C57.1079 34.978 56.6299 28.7988 55.8278 22.6575M55.8278 22.6575C58.3798 21.8 60.9669 21.0067 63.5803 20.2833C54.0619 13.6107 43.9014 7.90467 33.2499 3.25C22.5982 7.90565 12.4377 13.6127 2.91943 20.2862C5.52481 21.0056 8.10995 21.7963 10.6719 22.6575C18.4554 25.2744 26.0075 28.5348 33.2499 32.405C40.4912 28.5348 48.0452 25.2743 55.8278 22.6575ZM17.9374 36.8121C18.5175 36.8121 19.0739 36.5816 19.4841 36.1714C19.8944 35.7611 20.1249 35.2047 20.1249 34.6246C20.1249 34.0444 19.8944 33.488 19.4841 33.0778C19.0739 32.6676 18.5175 32.4371 17.9374 32.4371C17.3572 32.4371 16.8008 32.6676 16.3906 33.0778C15.9803 33.488 15.7499 34.0444 15.7499 34.6246C15.7499 35.2047 15.9803 35.7611 16.3906 36.1714C16.8008 36.5816 17.3572 36.8121 17.9374 36.8121ZM17.9374 36.8121V26.0933C22.8862 23.0172 27.9978 20.2112 33.2499 17.6875M12.8128 51.375C14.4402 49.7516 15.7307 47.8225 16.6102 45.6987C17.4896 43.5749 17.9407 41.2983 17.9374 38.9996V34.6246" stroke="#223D5D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
 
+                <div class="flex flex-col gap-1">
+                    <h3>{{ certificate.nome }}</h3>
+                    <br>
+                    <p>Código: </p>
+                    <p>{{ certificate.codigo }}</p>
+                </div>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="103" height="4" viewBox="0 0 103 4" fill="none">
+                    <path d="M1.25 2.03198H101.25" stroke="#CCCCCC" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+
+                <button class="buttonDownload" >
+                    <a href="{{ certificate.link }}" download>Baixar Certificado</a>
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="notFound != null">
+            <h2 class="text-red-600">{{ notFound }}</h2>
+        </div>
+
+        <div *ngIf="isUserLogged()" class="pt-4 pb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="203" height="3" viewBox="0 0 203 3" fill="none">
+                <path d="M1.25 1.25H201.25" stroke="#CCCCCC" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div *ngIf="isUserLogged()" class="logged flex justify-center items-center flex-col gap-6">
+            <h2>Meus Certificados</h2>
+            <div class="card" *ngFor="let certificate of certificates">
+                <svg xmlns="http://www.w3.org/2000/svg" width="67" height="57" viewBox="0 0 67 57" fill="none">
+                    <path d="M10.6749 22.6575C9.87262 28.7988 9.39459 34.978 9.24277 41.1696C17.6393 44.6769 25.6787 48.9843 33.2499 54.0321C40.8219 48.9841 48.8623 44.6767 57.2599 41.1696C57.1079 34.978 56.6299 28.7988 55.8278 22.6575M55.8278 22.6575C58.3798 21.8 60.9669 21.0067 63.5803 20.2833C54.0619 13.6107 43.9014 7.90467 33.2499 3.25C22.5982 7.90565 12.4377 13.6127 2.91943 20.2862C5.52481 21.0056 8.10995 21.7963 10.6719 22.6575C18.4554 25.2744 26.0075 28.5348 33.2499 32.405C40.4912 28.5348 48.0452 25.2743 55.8278 22.6575ZM17.9374 36.8121C18.5175 36.8121 19.0739 36.5816 19.4841 36.1714C19.8944 35.7611 20.1249 35.2047 20.1249 34.6246C20.1249 34.0444 19.8944 33.488 19.4841 33.0778C19.0739 32.6676 18.5175 32.4371 17.9374 32.4371C17.3572 32.4371 16.8008 32.6676 16.3906 33.0778C15.9803 33.488 15.7499 34.0444 15.7499 34.6246C15.7499 35.2047 15.9803 35.7611 16.3906 36.1714C16.8008 36.5816 17.3572 36.8121 17.9374 36.8121ZM17.9374 36.8121V26.0933C22.8862 23.0172 27.9978 20.2112 33.2499 17.6875M12.8128 51.375C14.4402 49.7516 15.7307 47.8225 16.6102 45.6987C17.4896 43.5749 17.9407 41.2983 17.9374 38.9996V34.6246" stroke="#223D5D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <div class="flex flex-col gap-1">
+                    <h3>{{ certificate.nome }}</h3>
+                    <div class="flex flex-col flex-1 w-10">
+                        <p class="certificateTitleCode font-bold">Código:</p>
+                        <p class="certificateCode text-wrap break-words whitespace-pre-wrap">{{ certificate.codigo }}</p>
+                    </div>
+                </div>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="103" height="4" viewBox="0 0 103 4" fill="none">
+                    <path d="M1.25 2.03198H101.25" stroke="#CCCCCC" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+
+                <button class="buttonDownload" >
+                    <a href="{{ certificate.link }}" download>Baixar Certificado</a>
+                </button>
+            </div>
         </div>
     </main>
 </div>

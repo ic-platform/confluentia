@@ -2,8 +2,8 @@
     border-radius: 6.25rem;
     background: var(--Card-Colors-Card-BG, #FCFAF8);
     display: flex;
-    width: 11.40625rem;
-    height: 11.32813rem;
+    width: 11rem;
+    height: 11rem;
     padding: 3.125rem 3.75rem;
     justify-content: center;
     align-items: center;
@@ -28,13 +28,97 @@ p {
     line-height: normal;
 }
 
-#searchCertificate{
-    display: flex;
-    padding: 0.9375rem 0;
-    margin: 0 0.2rem;
-    align-items: center;
-    gap: 0.625rem;
-    align-self: stretch;
-    border-radius: 0.78125rem;
-    border: 1.5px solid var(--Text-Colors-Body-Common-Text, #1B1B1B);
+form {
+    width: 80%;
+    max-width: 80%;
+
+    div {
+        input {
+            border-radius: 12.5px;
+            border: 1.5px solid var(--Text-Colors-Body-Common-Text, #1B1B1B);
+            padding: 0.9rem;
+        }
+    }
+
+    .verify {
+        width: 6rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode, #1B1B1B);
+    }
 }
+
+.logged, .not-logged {
+    h2 {
+        color: var(--Text-Colors-Body-Common-Text, #1B1B1B);
+        font-family: "Open Sans";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+        padding: 1rem 3rem;
+        width: 25rem;
+        max-width: 80%;
+        height: 25rem;
+        border-radius: 30px;
+        background: var(--Card-Colors-Card-BG, #FCFAF8);
+
+        h3{
+            color: var(--Text-Colors-CTA-Text-CTA-Blue-Text, #223D5D);
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .certificateTitleCode{
+            color: var(--Text-Colors-Body-Common-Text, #1B1B1B);
+            text-align: center;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .certificateCode {
+            color: var(--Text-Colors-Body-Common-Text, #1B1B1B);
+            text-align: center;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: light;
+            line-height: normal;
+            
+        }
+
+        .buttonDownload {
+            color: var(--Text-Colors-Body-Shadow-Mode-Text, #1B1B1B);
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 10px;
+            border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode, #1B1B1B);
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+
+
