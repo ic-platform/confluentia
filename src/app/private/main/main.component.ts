@@ -30,20 +30,20 @@ export class MainComponent {
   defineButtons(): void {
     // First Row:
      this.buttonsFirstRow = [
-      { iconPath: '../../../assets/icons/catalogIcon.svg', buttonName: 'Catálogo', link: '/catalog' },
-      { iconPath: '../../../assets/icons/certificateIcon.svg', buttonName: 'Certificados', link: '/certificate' },
-      { iconPath: '../../../assets/icons/myCoursesIcon.svg', buttonName: 'Meus Cursos', link: '/my-courses' }
+      { iconPath: '/icons/catalogIcon.svg', buttonName: 'Catálogo', link: '/catalog' },
+      { iconPath: '/icons/certificateIcon.svg', buttonName: 'Certificados', link: '/certificate' },
+      { iconPath: '/icons/myCoursesIcon.svg', buttonName: 'Meus Cursos', link: '/my-courses' }
     ]
 
     // Second Row:
       this.buttonsSecondRow = [
-        { iconPath: '../../../assets/icons/profileIcon.svg', buttonName: 'Editar Perfil', link: '/profile' },
-        { iconPath: '../../../assets/icons/contactIcon.svg', buttonName: 'Fale Conosco', link: '/contact' }
+        { iconPath: '/icons/profileIcon.svg', buttonName: 'Editar Perfil', link: '/profile' },
+        { iconPath: '/icons/contactIcon.svg', buttonName: 'Fale Conosco', link: '/contact' }
       ]
 
       if (!this.isUserStudent) {
         this.buttonsSecondRow.unshift(
-          { iconPath: '../../../assets/icons/manageIcon.svg', buttonName: 'Gerenciar', link: '/manage' },
+          { iconPath: '/icons/manageIcon.svg', buttonName: 'Gerenciar', link: '/manage' },
         )
       }
   }

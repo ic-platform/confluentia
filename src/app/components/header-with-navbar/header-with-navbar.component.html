@@ -1,4 +1,4 @@
-<div class="flex p-6 content-center px-12 pt-12">
+<div class="flex justify-between content-center px-12 pt-12">
     <div class="flex justify-center image">
         <div *ngIf="type.colorful">
             <svg width="257" height="83" viewBox="0 0 257 83" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,12 +51,12 @@
         </div>
     </div>
 
-    <div class="navbar">
-        <div class="flex-none w-1/12 content-start">
+    <div class="navbar flex content-center links">
+        <div class="flex flex-1 gap-6 w-1/12 content-center">
             <a [routerLink]="['/home']">Início</a>
             <a [routerLink]="['/meet-us']">Conhecer</a>
             <a [routerLink]="['/catalog']">Catálogo</a>
-            <a [routerLink]="['/certificate']">Certificados</a>
+            <a [routerLink]="['/certificate']" [routerLinkActive]="['is-active']">Certificados</a>
         </div>
     </div>
 

@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header-with-navbar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule, RouterLinkActive],
   templateUrl: './header-with-navbar.component.html',
   styleUrl: './header-with-navbar.component.scss'
 })
@@ -15,7 +16,7 @@ export class HeaderWithNavbarComponent {
   };
 
   @Input() type: any = {
-    colorful: false,
+    colorful: true,
     white: false,
   };
 
