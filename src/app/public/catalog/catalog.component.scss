@@ -1,0 +1,103 @@
+.new-course{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.position{
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCFAF8;
+    width: 60%;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.bottom{
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseTitle{
+    font-size: 1.75rem;
+}
+
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #223D5D;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: var(--body-text);
+}
+
+.new-course-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.card{
+    margin: 1rem;
+    width: 30%;
+    height: 300px;
+    background-color: #FCFAF8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cardPosit{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.leftStat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1{
+    margin-top: 0.7rem;
+    padding: 0.3rem;
+    border: solid 1px #223D5D;
+    border-radius: 10px;
+}

@@ -1,0 +1,54 @@
+.bg-area-card{
+    background: var(--Card-Colors-Card-BG, #FCFAF8);
+
+    svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+.p-area-card{
+    color: var(--Text-Colors-Body-Common-Text, #1B1B1B);
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 1.5rem;
+}
+
+form {
+    div {
+        display: flex;
+        align-items: flex-start;
+
+        label {
+            color: var(--Old-Colors-Dark-Text-500, var(--Text-Colors-Body-Common-Text, #1B1B1B));
+            text-align: start;
+            font-family: "Open Sans";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            padding: 0.5rem;
+        }
+        
+        input {
+            border-radius: 12.5px;
+            border: 1.5px solid var(--Text-Colors-Body-Common-Text, #1B1B1B);
+            padding: 0.5rem;
+            width: 20rem;
+        }
+    }
+
+    button {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode, #1B1B1B);
+        margin: 1rem 0;
+        font-weight: 600;
+    }
+}

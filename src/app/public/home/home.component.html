@@ -1,6 +1,9 @@
 <div class="flex flex-col h-screen">
+  <div class="flex flex-col h-full">
     <app-header class="flex-none" [param]="param"></app-header>
-    <main class="flex-col flex-1 w-full justify-center content-center text-center">
+    <main
+      class="flex-col flex-1 w-full justify-center content-center text-center"
+    >
       <p>Onde o conhecimento converge</p>
       <p>para construir um futuro melhor</p>
       <p class="span">Confluentia é o conhecimento a serviço da comunidade</p>
@@ -13,55 +16,59 @@
     </main>
     <app-fumec-footer class="flex-none"></app-fumec-footer>
   </div>
+</div>
+
+<div>
   <svg
-  class="absolute w-full h-auto md:svg-bottom"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1440 347"
-  fill="none"
+  class=" absolute -z-50 -bottom-0 hidden md:block"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 347"
+    fill="none"
   >
-  <g filter="url(#filter0_d_982_502)">
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M0 130.683L39.6 142.7C80.4 154.718 159.6 178.753 240 190.771C320.4 202.789 399.6 202.789 480 172.744C560.4 142.7 639.6 82.6123 720 46.5595C800.4 10.5066 879.6 -1.51101 960 10.5066C1040.4 22.5242 1119.6 58.5771 1200 88.6211C1280.4 118.665 1359.6 142.7 1400.4 154.718L1440 166.736V347H1400.4C1359.6 347 1280.4 347 1200 347C1119.6 347 1040.4 347 960 347C879.6 347 800.4 347 720 347C639.6 347 560.4 347 480 347C399.6 347 320.4 347 240 347C159.6 347 80.4 347 39.6 347H0V130.683Z"
-      fill="#267131"
-    />
-  </g>
-  <defs>
-    <filter
-      id="filter0_d_982_502"
-      x="-10"
-      y="0"
-      width="1460"
-      height="361"
-      filterUnits="userSpaceOnUse"
-      color-interpolation-filters="sRGB"
-    >
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-      <feColorMatrix
-        in="SourceAlpha"
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        result="hardAlpha"
+    <g filter="url(#filter0_d_982_502)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 130.683L39.6 142.7C80.4 154.718 159.6 178.753 240 190.771C320.4 202.789 399.6 202.789 480 172.744C560.4 142.7 639.6 82.6123 720 46.5595C800.4 10.5066 879.6 -1.51101 960 10.5066C1040.4 22.5242 1119.6 58.5771 1200 88.6211C1280.4 118.665 1359.6 142.7 1400.4 154.718L1440 166.736V347H1400.4C1359.6 347 1280.4 347 1200 347C1119.6 347 1040.4 347 960 347C879.6 347 800.4 347 720 347C639.6 347 560.4 347 480 347C399.6 347 320.4 347 240 347C159.6 347 80.4 347 39.6 347H0V130.683Z"
+        fill="#267131"
       />
-      <feOffset dy="4" />
-      <feGaussianBlur stdDeviation="5" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0.541176 0 0 0 0 0.388235 0 0 0 1 0"
-      />
-      <feBlend
-        mode="normal"
-        in2="BackgroundImageFix"
-        result="effect1_dropShadow_982_502"
-      />
-      <feBlend
-        mode="normal"
-        in="SourceGraphic"
-        in2="effect1_dropShadow_982_502"
-        result="shape"
-      />
-    </filter>
-  </defs>
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_982_502"
+        x="-10"
+        y="0"
+        width="1460"
+        height="361"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="5" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0.541176 0 0 0 0 0.388235 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_982_502"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_982_502"
+          result="shape"
+        />
+      </filter>
+    </defs>
   </svg>
+</div>
