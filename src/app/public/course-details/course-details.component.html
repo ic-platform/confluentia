@@ -1,1 +1,25 @@
-<p>course-details works!</p>
+<header>
+    <app-header [param]="param"></app-header>
+</header>
+
+<div class="course-details flex flex-col justify-center items-center w-full p-8">
+    <div class="flex flex-row gap-4 flex-wrap md:flex-nowrap justify-center">
+        <img [src]="courseDetails.imgUrl" alt="Imagem do curso" class="course-image"/>
+        <div class="flex flex-col justify-between items-center text-center gap-8 pb-8 data">
+            <h1>{{ courseDetails.title }}</h1>
+            <p>{{ courseDetails.description }}</p>
+            <div class="course-meta flex flex-row flex-wrap gap-4 text-center justify-between items-center">
+                <span><strong>Avaliação:</strong> {{ courseDetails.rating }} estrelas</span>
+                <span><strong>Duração:</strong> {{ courseDetails.time }}</span>
+                <span><strong>Nível:</strong> {{ courseDetails.level }}</span>
+            </div>
+            <button class="enroll-button w-52 h-12 rounded-xl text-center">Quero me matricular</button>
+            <button class="enrolled-button w-52 h-12 rounded-xl text-center">Acessar Conteúdo</button>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-4 pt-8 text-center w-full">
+        <h2 class="font-bold text-2xl pb-4">Conteúdo do curso</h2>
+        <div class="course-content text-center" [innerHTML]="courseDetails.content"></div>
+    </div>  
+</div>

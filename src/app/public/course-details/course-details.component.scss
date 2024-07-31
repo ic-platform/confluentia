@@ -1,0 +1,41 @@
+.course-details {
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  
+  .course-image {
+    width: 50%;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  
+  .course-content li {
+    margin: 5px 0;
+  }
+  
+  .enroll-button {
+    border-radius: 0.625rem;
+    background: var(--CTA-Colors-CTA-BG-CTA-Green-BG, #267131);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .enrolled-button {
+    border-radius: 0.625rem;
+    background: var(--CTA-Colors-CTA-BG-CTA-Caramel-BG, #b7793a);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .enroll-button:hover {
+    background-color: #45a049;
+  }
+
+  .enrolled-button:hover {
+    background-color: #b36e2a;
+  }
+  
