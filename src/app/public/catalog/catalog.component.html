@@ -5,24 +5,28 @@
 
   <app-carousel class="" [dataObj]="dataObj"></app-carousel>
 
-  <div class="flex flex-col justify-center items-center w-full">
+  <!-- <div class="flex flex-col justify-center items-center w-full">
     <form class="flex flex-col flex-1 gap-5 justify-center items-center p-2 md:w-2/3">
       <div class="flex flex-row gap-2 w-full h-auto justify-center content-center">
           <input [(ngModel)]="courseToSearch" class="searchInput w-full p-2 " name="searchCertificate" id="searchCertificate" type="search" placeholder="Pesquise aqui...">
           <input class="verify" type="submit" value="Buscar" (click)="searchCourse(courseToSearch)">
       </div>
     </form>
-  </div>
+  </div> -->
 
   <svg class="flex justify-center items-center w-full m-2" xmlns="http://www.w3.org/2000/svg" width="204" height="4" viewBox="0 0 204 4" fill="none">
     <path d="M2 2H202" stroke="#CCCCCC" stroke-width="2.5" stroke-linecap="round"/>
   </svg>
 
-  <div class="foundCourse">
+  <!-- <div class="foundCourse">
 
+  </div> -->
+
+  <div class="w-full flex justify-center items-center text-center pb-4">
+    <h2 class="text-center disponibleCoursesTitle">Cursos Disponíveis</h2>
   </div>
 
-  <div class="disponibleCourses">
-    <app-course-card></app-course-card>
+  <div class="disponibleCourses flex flex-col md:flex-row justify-center items-center gap-4 flex-wrap pb-8">
+    <app-course-card *ngFor="let course of courses" [id]="course.id" [title]="course.title" [rating]="course.rating" [duration]="course.duration"></app-course-card>
   </div>
 </main>

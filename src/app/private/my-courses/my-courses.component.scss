@@ -1,0 +1,20 @@
+.searchInput {
+    border-radius: 0.78125rem;
+    border: 1.5px solid var(--Text-Colors-Body-Common-Text, #1B1B1B);
+}
+
+.verify {
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode, #1B1B1B);
+}
+
+.disponibleCoursesTitle {
+    color: var(--Text-Colors-Body-Common-Text, #1B1B1B);
+    font-family: "Open Sans";
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -41,6 +41,19 @@ export class CatalogComponent {
     }
   ];
 
+  courses = [
+    { id: 1, title: 'Excel Básico', rating: 4, duration: '5 horas' },
+    { id: 2, title: 'Excel Avançado', rating: 5, duration: '8 horas' },
+    { id: 3, title: 'Introdução ao Power BI', rating: 4.5, duration: '6 horas' },
+    { id: 4, title: 'Análise de Dados com Python', rating: 5, duration: '10 horas' },
+    { id: 5, title: 'Fundamentos de SQL', rating: 4, duration: '7 horas' },
+    { id: 6, title: 'Desenvolvimento Web com Angular', rating: 5, duration: '12 horas' },
+    { id: 7, title: 'Machine Learning Básico', rating: 4.5, duration: '9 horas' },
+    { id: 8, title: 'Visualização de Dados com Tableau', rating: 4, duration: '6 horas' },
+    { id: 9, title: 'Estatística para Ciência de Dados', rating: 4.5, duration: '8 horas' },
+    { id: 10, title: 'JavaScript Avançado', rating: 5, duration: '11 horas' }
+  ];
+
   constructor() {}
 
   isUserLoggedIn(): boolean {
