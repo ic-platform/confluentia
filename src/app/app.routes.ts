@@ -36,7 +36,7 @@ export const routes: Routes = [
     { path: 'profile', component: ProfileComponent },
     { path: 'my-courses', component: MyCoursesComponent },
     { path: 'course-details/:id', component: CourseDetailsComponent },
-    { path: 'lesson', component: LessonComponent },
+    { path: 'lesson/:id', component: LessonComponent },
     { path: 'manage', component: ManageComponent },
     { path: 'manager-register', component: ManagerRegisterComponent },
     { path: 'course-register', component: CourseRegisterComponent },

@@ -13,8 +13,8 @@
                 <span><strong>Duração:</strong> {{ courseDetails.time }}</span>
                 <span><strong>Nível:</strong> {{ courseDetails.level }}</span>
             </div>
-            <button class="enroll-button w-52 h-12 rounded-xl text-center">Quero me matricular</button>
-            <button class="enrolled-button w-52 h-12 rounded-xl text-center">Acessar Conteúdo</button>
+            <button class="enroll-button w-52 h-12 rounded-xl text-center" (click)="subscribeToCourse()">Quero me matricular</button>
+            <button class="enrolled-button w-52 h-12 rounded-xl text-center" (click)="accessCourse()">Acessar Conteúdo</button>
         </div>
     </div>
 

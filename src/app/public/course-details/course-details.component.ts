@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
@@ -71,7 +72,19 @@ export class CourseDetailsComponent {
     imgUrl: 'https://via.placeholder.com/300' // Adicione o caminho da imagem
   };
 
-  constructor() { }
+  constructor(private route: Router) { }
+
+  subscribeToCourse() {
+
+  }
+
+  accessCourse() {
+    const url = this.route.url;
+    console.log(url);
+    const id: number = Number(url.split('/')[2]);
+    console.log(id);
+    this.route.navigate(['/lesson', id]);
+  }
 
   ngOnInit(): void {
     this.getButton();
