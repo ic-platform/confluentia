@@ -1,0 +1,15 @@
+<div class="carousel">
+    <div class="carousel-inner" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+        <div class="carousel-item" *ngFor="let item of dataObj">
+        <img [src]="item.imgLink" alt="Carousel Image">
+        <div class="carousel-content">
+            <h2>{{ item.title }}</h2>
+            <h3>{{ item.secondHeading }}</h3>
+            <p>{{ item.description }}</p>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control prev" (click)="prevSlide()">&#10094;</button>
+    <button class="carousel-control next" (click)="nextSlide()">&#10095;</button>
+</div>
+  

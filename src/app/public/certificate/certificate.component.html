@@ -25,8 +25,8 @@
 
         <form  class="flex flex-col flex-1 gap-5 justify-center items-center">
             <div class="flex flex-col gap-2 w-full h-auto justify-center content-center">
-            <label class="ml-3" for="searchCertificate">Código do Certificado</label>
-            <input [(ngModel)]="certificateCodeToSearch" class="searchCertificateInput w-full" name="searchCertificate" id="searchCertificate" type="search">
+                <label class="ml-3" for="searchCertificate">Código do Certificado</label>
+                <input [(ngModel)]="certificateCodeToSearch" class="searchCertificateInput w-full" name="searchCertificate" id="searchCertificate" type="search">
             </div>
             <input class="verify" type="submit" value="Verificar" (click)="searchCertificate(certificateCodeToSearch)">
         </form>
