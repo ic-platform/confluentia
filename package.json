@@ -20,6 +20,8 @@
     "@angular/router": "^18.1.0",
     "@supabase/supabase-js": "^2.44.4",
     "axios": "^1.7.2",
+    "jquery": "^3.7.1",
+    "ngx-owl-carousel-o": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -29,6 +31,7 @@
     "@angular/cli": "^18.1.2",
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
+    "@types/jquery": "^3.5.30",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

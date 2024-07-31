@@ -1,16 +1,36 @@
 import { Component } from '@angular/core';
-import { HeaderJustLogoComponent } from '../../components/header-just-logo/header-just-logo.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [HeaderJustLogoComponent],
+  imports: [HeaderComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss'
 })
 export class CatalogComponent {
-  type: any = {
-    colorful: true,
-    white: false,
-  };
+  param = {
+    buttonText: '',
+    router: ''
+  }
+
+  constructor() {}
+
+  isUserLoggedIn(): boolean {
+    return true;
+  }
+
+  getButton(): void {
+    if(this.isUserLoggedIn()) {
+      this.param.buttonText = 'Menu';
+      this.param.router = '/main';
+    } else {
+      this.param.buttonText = 'Login';
+      this.param.router = '/sign-in';
+    }
+  }
+
+  ngOnInit() {
+    this.getButton();
+  }
 }

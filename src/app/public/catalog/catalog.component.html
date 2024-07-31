@@ -1,12 +1,8 @@
 <div class="flex flex-col h-screen">
-  <div
-    class="logout-navbar flex flex-row flex-1 justify-center items-center max-h-36"
-  >
-    <app-header-just-logo
-      class="flex-auto justify-center w-11/12 pl-24"
-      [type]="type"
-    ></app-header-just-logo>
-  </div>
+  <header>
+    <app-header [param]="param"></app-header>
+  </header>
+  
   <div class="page">
     <div class="new-course">
       <div class="position">
