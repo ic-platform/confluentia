@@ -15,7 +15,7 @@
   
   .progress {
     height: 20px;
-    background-color: #4CAF50;
+    background-color: var(--Elements-Colors-Blue-Element, #223D5D);
     width: 0;
   }
   
@@ -30,7 +30,7 @@
   .module h2 {
     border-radius: 1.25rem;
     background: var(--Card-Colors-Card-BG, #FCFAF8);
-    padding: 1rem;
+    padding: 1.5rem;
   }
   
   .module ul {
@@ -41,9 +41,10 @@
   .module button {
     width: 100%;
     text-align: left;
-    padding: 10px;
-    border: none;
-    background-color: #f0f0f0;
+    text-indent: 0.4rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    background: var(--Card-Colors-Card-BG, #FCFAF8);
     cursor: pointer;
   }
   
@@ -52,27 +53,15 @@
   }
   
   .video-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
   }
-  
-  .video-play-button {
-    width: 50px;
-    height: 50px;
-    background-color: #000;
-    //mask: url('path/to/play-icon.svg') center/contain no-repeat;
-    border: none;
-    cursor: pointer;
+
+  iframe {
+    height: 30rem;
   }
-  
-  .lesson-description h3 {
-    margin: 10px 0;
-  }
+
   
   .lesson-description ul {
     list-style-type: none;
@@ -84,11 +73,11 @@
   }
   
   .resources-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    border-radius: 0.625rem;
+    border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode, #1B1B1B);
     cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 600;
   }
   
   .resources-button:hover {
@@ -98,25 +87,40 @@
   .navigation-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+  }
+
+  .previous-button {
+    border-radius: 0.625rem;
+    border: 1px solid var(--CTA-Colors-Strokes-Shadow-Mode-2, #1B1B1B);
+    padding: 10px 20px;
+    font-weight: 600;
   }
   
-  .previous-button,
   .next-button {
-    background-color: #4CAF50;
+    border-radius: 0.625rem;
+    border: 1px solid var(--CTA-Colors-CTA-BG-CTA-Green-BG, #267131);
+    background: var(--CTA-Colors-CTA-BG-CTA-Green-BG, #267131);
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    font-weight: 600;
   }
   
   .previous-button:hover,
   .next-button:hover {
     background-color: #45a049;
   }
+
+  .next-button:disabled {
+    background-color: #153f1b;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   
   .previous-button:disabled {
     background-color: #e0e0e0;
+    opacity: 0.4;
     cursor: not-allowed;
   }
   
